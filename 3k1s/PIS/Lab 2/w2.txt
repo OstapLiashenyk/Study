@@ -1,0 +1,72 @@
+@startuml
+
+' Define actors
+actor Patient
+actor MedicalStaff
+actor LogisticsStaff
+actor SanitationStaff
+actor HospitalManagement
+actor AdministrativeStaff
+
+' Define systems and modules
+rectangle "Frontend Service" {
+  [Web Client] as WebClient
+  [Mobile Client] as MobileClient
+}
+
+node "Backend Services" {
+  [User Service] as UserService
+  [Order Service] as OrderService
+  [Payment Service] as PaymentService
+  [Patient Monitoring] as PatientMonitoring
+  [Inventory Management] as InventoryManagement
+  [Staff Management] as StaffManagement
+  [Patient Data Management] as PatientDataManagement
+  [Alerts and Notifications] as AlertsNotifications
+  [Analytics and Reporting] as AnalyticsReporting
+  [Billing Module] as BillingModule
+}
+
+database "Databases" {
+  [User Database] as UserDB
+  [Order Database] as OrderDB
+}
+
+[CDN] as CDN
+
+' Define relationships
+WebClient --> UserService : uses
+MobileClient --> UserService : uses
+WebClient --> CDN : retrieves assets
+MobileClient --> CDN : retrieves assets
+
+UserService --> UserDB : reads/writes
+OrderService --> OrderDB : reads/writes
+PaymentService .down.> OrderService : validates payments
+
+Patient --> PatientMonitoring : accesses room and status info
+Patient --> BillingModule : pays bills
+
+MedicalStaff --> AlertsNotifications : receives work plan and alerts
+MedicalStaff --> PatientDataManagement : accesses patient info
+
+LogisticsStaff --> InventoryManagement : manages inventory levels
+LogisticsStaff --> StaffManagement : creates schedules
+
+SanitationStaff --> StaffManagement : receives schedule
+
+HospitalManagement --> AnalyticsReporting : accesses reports and analytics
+
+AdministrativeStaff --> PatientDataManagement : manages data access
+AdministrativeStaff --> StaffManagement : manages staff access
+
+' Additional relationships for the new modules
+PatientMonitoring --> UserDB : tracks location and status
+InventoryManagement --> UserDB : tracks inventory
+StaffManagement --> UserDB : schedules and management
+PatientDataManagement --> UserDB : manages medical records
+AlertsNotifications --> MedicalStaff : sends notifications
+AnalyticsReporting --> HospitalManagement : provides analytics
+BillingModule --> UserDB : handles financial transactions
+
+@enduml

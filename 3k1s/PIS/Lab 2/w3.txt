@@ -1,0 +1,95 @@
+@startuml
+
+' Define actors
+actor Patient
+actor MedicalStaff
+actor LogisticsStaff
+actor SanitationStaff
+actor HospitalManagement
+actor AdministrativeStaff
+
+' Define external systems
+[Insurance & Billing systems] as InsuranceBilling
+[Electronic Medical Record System] as EMR
+
+' Define databases
+database "SQL Database" as SQLDB {
+  frame "Patient Data" {
+    [Patient Profiles]
+    [Medical Records]
+    [Patient Locations]
+  }
+  frame "Resource Management" {
+    [Inventory]
+    [Schedules]
+  }
+  frame "Billing Data" {
+    [Billing Information]
+    [Insurance Claims]
+  }
+}
+
+' Define services and their technologies
+package "Backend Services" {
+  [Patient Monitoring Service\nNode.js + Express] as PatientMonitoring
+  [Inventory Management Service\nNode.js + Express] as InventoryManagement
+  [Staff Management Service\nNode.js + Express] as StaffManagement
+  [Patient Data Service\nNode.js + Express] as PatientDataService
+  [Alerts and Notifications Service\nNode.js + Express] as AlertsNotifications
+  [Analytics and Reporting Service\nNode.js + Express] as AnalyticsReporting
+  [Billing Service\nNode.js + Express] as BillingService
+}
+
+' Define frontends
+package "Frontend Applications" {
+  [Web Application\nReact] as WebApp
+  [Mobile Application\nReact Native] as MobileApp
+}
+
+' Define relationships
+WebApp --> PatientMonitoring : accesses
+WebApp --> InventoryManagement : accesses
+WebApp --> StaffManagement : accesses
+WebApp --> PatientDataService : accesses
+WebApp --> AlertsNotifications : accesses
+WebApp --> AnalyticsReporting : accesses
+WebApp --> BillingService : accesses
+
+MobileApp --> PatientMonitoring : accesses
+MobileApp --> InventoryManagement : accesses
+MobileApp --> StaffManagement : accesses
+MobileApp --> PatientDataService : accesses
+MobileApp --> AlertsNotifications : accesses
+MobileApp --> AnalyticsReporting : accesses
+MobileApp --> BillingService : accesses
+
+PatientMonitoring --> SQLDB : reads/writes patient locations
+InventoryManagement --> SQLDB : reads/writes inventory data
+StaffManagement --> SQLDB : reads/writes staff schedules
+PatientDataService --> SQLDB : reads/writes patient data
+BillingService --> SQLDB : reads/writes billing information
+
+' External system integrations
+PatientDataService --> EMR : integrates with
+BillingService --> InsuranceBilling : integrates with
+
+' Define actor interactions
+Patient -left-> WebApp : uses
+Patient -left-> MobileApp : uses
+
+MedicalStaff -right-> WebApp : uses
+MedicalStaff -right-> MobileApp : uses
+
+LogisticsStaff -right-> WebApp : uses
+LogisticsStaff -right-> MobileApp : uses
+
+SanitationStaff -right-> WebApp : uses
+SanitationStaff -right-> MobileApp : uses
+
+HospitalManagement -right-> WebApp : uses
+HospitalManagement -right-> MobileApp : uses
+
+AdministrativeStaff -right-> WebApp : uses
+AdministrativeStaff -right-> MobileApp : uses
+
+@enduml

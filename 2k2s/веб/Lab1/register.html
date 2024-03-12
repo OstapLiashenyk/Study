@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Service</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.15/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex-shrink flex">
+            <img
+              class="h-8 w-8 mr-6"
+              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              alt="Workflow logo"
+            />
+            <p class="text-xl font-bold">Booking service</p>
+          </a>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="index.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-200"
+                >Home</a
+              >
+              <a
+                href="rooms.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-200"
+                >Rooms</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <a
+                href="login.html"
+                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              >
+                Login
+              </a>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden mobile-menu">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Heroicon name: menu -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+              <!-- Heroicon name: x -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a
+              href="index.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+              >Home</a
+            >
+            <a
+              href="rooms.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+              >Rooms</a
+            >
+          </div>
+          <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="flex items-center px-5 hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://source.unsplash.com/random/50x50/?user"
+                  alt=""
+                />
+              </div>
+              <div class="ml-3">
+                <div class="text-base font-medium text-gray-800">John Doe</div>
+                <div class="text-sm font-medium text-gray-500">
+                  johndoe@example.com
+                </div>
+              </div>
+              <button
+                type="button"
+                class="ml-auto bg-white rounded-md p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: bell -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-3 px-2 space-y-1 sm:px-3 hidden">
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Your Profile</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Settings</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Sign out</a
+              >
+            </div>
+            <div class="mt-3 px-2 space-y-1 sm:px-3">
+              <a
+                href="login.html"
+                class="block px-3 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                >Login</a
+              >
+            </div>
+            <div class="ml-4 flex items-center md:ml-6"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+      <div class="max-w-5xl mx-auto">
+        <form
+          class="px-40 py-12 border bg-gray-100 border-gray-300 rounded shadow"
+        >
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="username">
+              Username
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full"
+              type="text"
+              name="username"
+              id="username"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="fname">
+              First name
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full"
+              type="text"
+              name="fname"
+              id="fname"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="lname">
+              Last name
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full"
+              type="text"
+              name="lname"
+              id="lname"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="email">
+              Email
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="phone">
+              Phone
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full"
+              type="phone"
+              name="phone"
+              id="phone"
+              required
+            />
+          </div>
+          <div class="mb-4 relative">
+            <label class="block text-gray-700 font-bold mb-2" for="password">
+              Password
+            </label>
+            <input
+              class="border border-gray-400 p-2 w-full pr-10"
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+            <div class="absolute top-2 right-2">
+              <button
+                type="button"
+                id="show-password"
+                class="focus:outline-none"
+              >
+                <svg
+                  class="h-6 w-6 text-gray-400 hover:text-gray-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-1.5-5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-around">
+            <button
+              class="bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-700"
+              type="submit"
+            >
+              Register
+            </button>
+            <a
+              href="login.html"
+              class="bg-gray-100 border border-2 border-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-200"
+            >
+              Login
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="bg-indigo-700 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-start">
+          <div class="px-4 sm:w-1/2">
+            <h5 class="text-xl font-bold mb-6">About Us</h5>
+            <p class="text-gray-100 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              mattis lorem mauris, ac dignissim dolor rutrum id.
+            </p>
+          </div>
+
+          <div class="px-4 sm:w-1/2 w-full">
+            <h5 class="text-xl font-bold mb-6 justify-start">Categories</h5>
+            <a href="#" class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Rooms</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Services</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Events</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block"
+              >Dining</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+
+    <script>
+      const showPasswordButton = document.getElementById("show-password");
+      const passwordInput = document.getElementById("password");
+
+      showPasswordButton.addEventListener("click", () => {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+        showPasswordButton.classList.toggle("text-indigo-500", type === "text");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Service</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.15/dist/tailwind.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col ">
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex-shrink flex">
+            <img
+              class="h-8 w-8 mr-6"
+              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              alt="Workflow logo"
+            />
+            <p class="text-xl font-bold">Booking service</p>
+          </a>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="index.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-200"
+                >Home</a
+              >
+              <a
+                href="rooms.html"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-200"
+                >Rooms</a
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <a href="login.html" class="text-gray-500 hover:text-gray-900">
+                Login
+              </a>
+              <a
+                href="register"
+                class="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              >
+                Register
+              </a>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden mobile-menu">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Heroicon name: menu -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+              <!-- Heroicon name: x -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a
+              href="index.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+              >Home</a
+            >
+            <a
+              href="rooms.html"
+              class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+              >Rooms</a
+            >
+          </div>
+          <div class="pt-4 pb-3 border-t border-gray-200">
+            <div class="flex items-center px-5 hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-10 w-10 rounded-full"
+                  src="https://source.unsplash.com/random/50x50/?user"
+                  alt=""
+                />
+              </div>
+              <div class="ml-3">
+                <div class="text-base font-medium text-gray-800">John Doe</div>
+                <div class="text-sm font-medium text-gray-500">
+                  johndoe@example.com
+                </div>
+              </div>
+              <button
+                type="button"
+                class="ml-auto bg-white rounded-md p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <span class="sr-only">View notifications</span>
+                <!-- Heroicon name: bell -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-3 px-2 space-y-1 sm:px-3 hidden">
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Your Profile</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Settings</a
+              >
+              <a
+                href="#"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Sign out</a
+              >
+            </div>
+            <div class="mt-3 px-2 space-y-1 sm:px-3">
+              <a
+                href="login.html"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50"
+                >Log in</a
+              >
+              <a
+                href="register.html"
+                class="block px-3 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                >Register</a
+              >
+            </div>
+            <div class="ml-4 flex items-center md:ml-6"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
+      <section class="container mx-auto my-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="md:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+              alt="Room photo"
+              class="w-full h-92 object-cover rounded"
+            />
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold mb-2">Deluxe Room</h1>
+            <div class="text-gray-600 mb-4">$150 / night</div>
+            <span
+              class="bg-gray-300 rounded text-sm text-black py-1 px-2 font-semibold"
+              >2 adults, 1 child</span
+            >
+            <p class="text-gray-700 text-sm my-2">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="text-3xl text-gray-700 my-4">Book now</h2>
+      <div class="grid grid-cols-10 gap-6">
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 text-white rounded bg-red-500 text-white cursor-not-allowed"
+        >
+          00
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 text-white rounded bg-red-500 text-white cursor-not-allowed"
+        >
+          01
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 text-white rounded bg-red-500 text-white cursor-not-allowed"
+        >
+          02
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          03
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          04
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          05
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          06
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          07
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          08
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          09
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          10
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          11
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          12
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          13
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          14
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          15
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          16
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          17
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          18
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          19
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          20
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 bg-green-500 text-white rounded cursor-pointer hover:bg-green-700"
+        >
+          21
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 text-white rounded bg-red-500 text-white cursor-not-allowed"
+        >
+          22
+        </div>
+        <div
+          class="text-center h-12 w-12 flex items-center justify-center py-2 text-white rounded bg-red-500 text-white cursor-not-allowed"
+        >
+          23
+        </div>
+        <div
+          class="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 hidden"
+          id="modal"
+        >
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-md rounded-md px-4 py-6"
+          >
+            <h2 class="text-lg font-bold mb-4">
+              Would You like to book a room on this time?
+            </h2>
+            <p class="mb-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, animi?
+            </p>
+
+            <button
+              class="mx-2 modal-button accept-button bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Book
+            </button>
+            <button
+              class="mx-2 modal-button cancel-button bg-gray-100 text-gray-700 border border-4 border-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            >
+              Later
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-indigo-700 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-start">
+          <div class="px-4 sm:w-1/2">
+            <h5 class="text-xl font-bold mb-6">About Us</h5>
+            <p class="text-gray-100 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              mattis lorem mauris, ac dignissim dolor rutrum id.
+            </p>
+          </div>
+
+          <div class="px-4 sm:w-1/2 w-full">
+            <h5 class="text-xl font-bold mb-6 justify-start">Categories</h5>
+            <a
+              href="rooms.html"
+              class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Rooms</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Services</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block mb-2"
+              >Events</a
+            >
+            <a href="#" class="text-gray-400 hover:text-gray-100 block"
+              >Dining</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="book.js"></script>
+  </body>
+</html>
