@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde50e73-8cd1-4bd9-be3e-c9df6451c231" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="06045291-85c7-4913-b540-622d98727050" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kg/lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kg/lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kg/lab2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Kg/lab2/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,12 +12,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2dH9Nk3f0snq2Ubjohm6UVTHu0q" />
+  <component name="ProjectId" id="2de9uXUWPx4cRVKLd4QjP7K68F5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +29,7 @@
 }</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="lab2" />
+      <module name="ML" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -56,17 +54,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bde50e73-8cd1-4bd9-be3e-c9df6451c231" name="Changes" comment="" />
-      <created>1709654098814</created>
+      <changelist id="06045291-85c7-4913-b540-622d98727050" name="Changes" comment="" />
+      <created>1710357904783</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1709654098814</updated>
-      <workItem from="1709654107555" duration="4000" />
-      <workItem from="1709654124219" duration="2654000" />
-      <workItem from="1710248814695" duration="10043000" />
-      <workItem from="1710270561173" duration="5130000" />
-      <workItem from="1710326519446" duration="4435000" />
-      <workItem from="1710331869363" duration="11000" />
+      <updated>1710357904783</updated>
+      <workItem from="1710357906826" duration="93000" />
+      <workItem from="1710414950799" duration="38000" />
     </task>
     <servers />
   </component>
@@ -84,7 +78,15 @@
       </map>
     </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab2$main.coverage" NAME="main Coverage Results" MODIFIED="1710330397059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
