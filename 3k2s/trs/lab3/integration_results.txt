@@ -1,0 +1,16 @@
+Step size: 0.001, Cores: 1, Time taken: 0.10500025749206543, Speedup: 1
+Step size: 0.001, Cores: 2, Time taken: 0.045000314712524414, Speedup: 0.6444303160348619
+Step size: 0.001, Cores: 4, Time taken: 0.032003164291381836, Speedup: 0.9061468662231527
+Step size: 0.001, Cores: 8, Time taken: 0.029996633529663086, Speedup: 0.966760720104916
+Step size: 0.0001, Cores: 1, Time taken: 0.02903151512145996, Speedup: 1
+Step size: 0.0001, Cores: 2, Time taken: 0.027971506118774414, Speedup: 1.0367538633322253
+Step size: 0.0001, Cores: 4, Time taken: 0.03099966049194336, Speedup: 0.9354801495131593
+Step size: 0.0001, Cores: 8, Time taken: 0.037999629974365234, Speedup: 0.7631539320625917
+Step size: 1e-05, Cores: 1, Time taken: 0.02800583839416504, Speedup: 1
+Step size: 1e-05, Cores: 2, Time taken: 0.03171038627624512, Speedup: 0.914513206469027
+Step size: 1e-05, Cores: 4, Time taken: 0.027148008346557617, Speedup: 1.0682023764567434
+Step size: 1e-05, Cores: 8, Time taken: 0.04747438430786133, Speedup: 0.6108466166470807
+Step size: 2e-05, Cores: 1, Time taken: 0.02899956703186035, Speedup: 1
+Step size: 2e-05, Cores: 2, Time taken: 0.029065847396850586, Speedup: 0.9977196479398905
+Step size: 2e-05, Cores: 4, Time taken: 0.033933401107788086, Speedup: 0.8546024296163061
+Step size: 2e-05, Cores: 8, Time taken: 0.03400087356567383, Speedup: 0.8529065282939485

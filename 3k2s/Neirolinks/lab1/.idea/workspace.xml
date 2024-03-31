@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bde50e73-8cd1-4bd9-be3e-c9df6451c231" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3_1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3_1/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../trs/lab2/Lab2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../trs/lab2/Lab2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../trs/lab2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../trs/lab2/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="90ac9706-494b-4ee9-a432-59e368f57b07" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,25 +10,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2dH9Nk3f0snq2Ubjohm6UVTHu0q" />
+  <component name="ProjectId" id="2drcsOXns9p7eAfAloP8xME7ntv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="lab2" />
+      <module name="lab1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -59,20 +50,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bde50e73-8cd1-4bd9-be3e-c9df6451c231" name="Changes" comment="" />
-      <created>1709654098814</created>
+      <changelist id="90ac9706-494b-4ee9-a432-59e368f57b07" name="Changes" comment="" />
+      <created>1710769843724</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1709654098814</updated>
-      <workItem from="1709654107555" duration="4000" />
-      <workItem from="1709654124219" duration="2654000" />
-      <workItem from="1710248814695" duration="10043000" />
-      <workItem from="1710270561173" duration="5130000" />
-      <workItem from="1710326519446" duration="4435000" />
-      <workItem from="1710331869363" duration="11000" />
-      <workItem from="1710783266875" duration="669000" />
-      <workItem from="1710935591473" duration="168000" />
-      <workItem from="1710959596139" duration="45000" />
+      <updated>1710769843724</updated>
+      <workItem from="1710769857422" duration="88000" />
     </task>
     <servers />
   </component>
@@ -90,7 +73,15 @@
       </map>
     </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab2$main.coverage" NAME="main Coverage Results" MODIFIED="1710959602902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
