@@ -8,30 +8,24 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Data loading functions
 def load_image_data():
-    # Завантаження даних з CSV
     df = pd.read_csv('datasets/fer2013/fer2013.csv')
 
-    # Обробка даних
     def preprocess_image(image):
-        image = np.fromstring(image, sep=' ').reshape((48, 48, 1))  # Зображення з одним каналом
-        image = tf.image.resize(image, (64, 64))  # Зміна розміру зображень до 64x64
+        image = np.fromstring(image, sep=' ').reshape((48, 48, 1))
+        image = tf.image.resize(image, (64, 64))
         return image
 
     X = np.array([preprocess_image(img) for img in df['pixels']])
     y = df['emotion'].values
 
-    # Нормалізація зображень
     X = X / 255.0
 
-    # Розподіл на тренувальні та тестові дані
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     return np.array(X_train), np.array(X_test), np.array(y_train), np.array(y_test)
 
 
-# Візуалізація матриці
 def plot_confusion_matrix(y_true, y_pred, classes):
     cm = confusion_matrix(y_true, y_pred)
     plt.figure(figsize=(10, 8))
@@ -42,7 +36,6 @@ def plot_confusion_matrix(y_true, y_pred, classes):
     plt.show()
 
 
-# Image classification models
 def cnn_image_classifier(X_train, y_train, X_test, y_test, class_names):
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 1)),
@@ -68,15 +61,12 @@ def cnn_image_classifier(X_train, y_train, X_test, y_test, class_names):
 
 
 def transfer_learning_image_classifier(X_train, y_train, X_test, y_test, class_names):
-    # Підготовка моделі
     base_model = tf.keras.applications.ResNet50(weights='imagenet', include_top=False, input_shape=(64, 64, 3))
     base_model.trainable = False
 
-    # Додатковий шар для перетворення одноканальних зображень в трьохканальні
     inputs = tf.keras.Input(shape=(64, 64, 1))
-    x = layers.Conv2D(3, (1, 1))(inputs)  # Конвертування в трьохканальне зображення
+    x = layers.Conv2D(3, (1, 1))(inputs)
 
-    # Використання базової моделі
     x = base_model(x, training=False)
     x = layers.GlobalAveragePooling2D()(x)
     x = layers.Dense(64, activation='relu')(x)
@@ -95,11 +85,9 @@ def transfer_learning_image_classifier(X_train, y_train, X_test, y_test, class_n
     print(classification_report(y_test, y_pred))
     plot_confusion_matrix(y_test, y_pred, class_names)
 
-
-# Main function
 def main():
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Приховування інформаційних та попереджувальних повідомлень
-    os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'  # Вимкнення oneDNN custom operations
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+    os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 
     np.random.seed(42)
